@@ -8,33 +8,38 @@ import pic5 from "../assets/pic5.webp";
 const dataSlider = [
   {
     id: 1,
-    title: "Lorem ipsum",
-    subTitle: "Lorem",
+    title: "Slider - 1",
+    subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing. ",
+    button_h2: "Click Me",
     pic: pic1
   },
   {
     id: 2,
-    title: "Lorem ipsum",
-    subTitle: "Lorem",
+    title:  "Slider - 2",
+    subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing. ",
+    button_h2: "Click Me",
     pic: pic2
   },
   {
     id: 3,
-    title: "Lorem ipsum",
-    subTitle: "Lorem",
+    title:  "Slider - 3",
+    subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing. ",
+    button_h2: "Click Me",
     pic: pic3
 
   },
   {
     id: 4,
-    title: "Lorem ipsum",
-    subTitle: "Lorem",
+    title:  "Slider - 4",
+    subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing. ",
+    button_h2: "Click Me",
     pic: pic4
   },
   {
     id: 5,
-    title: "Lorem ipsum",
-    subTitle: "Lorem",
+    title:  "Slider - 5",
+    subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing. ",
+    button_h2: "Click Me",
     pic: pic5,
   },
 ];
