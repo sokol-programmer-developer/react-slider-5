@@ -18,3 +18,4 @@ import "./Slider.css";
 }
 
 export default Arrow;
+ 
