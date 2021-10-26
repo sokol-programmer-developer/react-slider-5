@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './Slider.css'
 
 import dataSlider from './dataSlider'
@@ -7,6 +7,15 @@ import Arrow from "./Arrow";
 const Slider = () => {
 
     const [slideId, setSlideId] = useState(1)
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSlideId(slideId === dataSlider.length ? 1 : slideId + 1);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [slideId]);
+
 
     const nextSlide = () => {
         if(slideId !== dataSlider.length){
@@ -39,7 +48,16 @@ const Slider = () => {
                             key={obj.id}
                             className={slideId === id + 1 ? "slide active_slide" : "slide"}
                         >
-                            <img  className="slider_pic" src={  `/assets/pic${id +1}.webp`}  alt="pic"/>
+                            <img  className="slider_pic" src={obj.pic}  alt="pic"/>
+
+                            <div className="slider_text">
+                                <h2 className="slider_title">{obj.title}</h2>
+                                <h3 className="slider_subTitle">{obj.subTitle}</h3>
+                            </div>
+
+                            <button className="slider_button">
+                                <h2 className="slider_button_h2"> {obj.button_h2} </h2>
+                            </button>
 
                         </div>
                     </>
