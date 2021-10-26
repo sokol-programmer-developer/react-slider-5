@@ -5,16 +5,20 @@
 
 *,*::before,*::after{ padding: 0;  margin: 0;  box-sizing: border-box; user-select: none}
 
-.container-slider,
+.container_slider,
 .slider_pic,
 .slide,
 .active_slide,
-.btn-slide,
+.slider_text,
+.slider_title,
+.slider_subTitle,
+.slider_button,
+.slider_button_h2,
 .container_arrow,
 .arrows,
 .arrow_left,
 .arrow_right,
-.container-dots,
+.container_dots,
 .dot,
 .active {
   padding: 0;
@@ -33,6 +37,7 @@
 .container_slider {
   width: 100vw;
   height: 100vh;
+
   position: relative;
 
 }
@@ -56,23 +61,77 @@
   opacity: 1;
 }
 
+.slider_text{
+  position: absolute;
+  width: 80vw;
+  height: 50vh;
+  z-index: 10;
+}
+
+.slider_title{
+  width: 50vw;
+  height: 8vh;
+  font-size: 4vh;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  color: rgba(255,255,255,0.8);
+
+}
+
+.slider_subTitle{
+  width: 70vw;
+  height: 8vh;
+  font-size: 4vh;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  color: rgba(255,255,255,0.8);
+}
+
+
+
+.slider_button{
+  position: absolute;
+  width: 10vw;
+  height: 5vh;
+  top: 70vh;
+  background-color:  rgba(255,255,255,0.8);
+  cursor: pointer;
+  border: none;
+  border-radius: 5vh;
+  z-index: 15;
+  transition: all 0.5s linear;
+}
+
+.slider_button_h2{
+  width: 20vw;
+  height: 10vh;
+  font-size: 2vh;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  color: rgba(0,0,0,0.8);
+  transition: all 0.5s linear;
+}
+
+.slider_button:hover{
+  background-color:  rgba(0,0,0,0.6);
+  transition: all 0.5s linear;
+}
+
+.slider_button:hover .slider_button_h2{
+  color: rgba(255,255,255,0.8);
+  transition: all 0.5s linear;
+}
+
+.slider_button:active .slider_button_h2{
+  color: #ffa500;
+  transition: all 0.15s linear;
+}
+
 .container_arrow{
   width: 90vw;
   height: 8vh;
-  background-color: yellow;
-  z-index: 999;
 }
 
-
-.btn-slide {
-  width: 5vw;
-  height: 8vh;
-  border-radius: 5vh;
-  background: #f1f1f1;
-  border: 0.1vh solid rgba(34, 34, 34, 0.287);
-  position: absolute;
-  cursor: pointer;
-}
 
 .arrows{
   width: 100vw;
@@ -97,6 +156,12 @@
   transition: all 0.5s linear;
 }
 
+.arrow_left:active,
+.arrow_right:active {
+  color: #ffa500;
+  transition: all 0.15s linear;
+}
+
 .arrow_left{
   left: 5vw;
 }
@@ -108,6 +173,8 @@
 .container_dots{
   grid-template-columns: repeat(5,1fr);
   position: absolute;
+  width: 30vw;
+  height: 10vh;
   bottom: 10vh;
 }
 
@@ -116,11 +183,13 @@
   height: 7vh;
   border-radius: 5vh;
   border: 0.3vh solid #f1f1f1;
-  background: #f1f1f1;
+  background: rgba(255,255,255,0.7);
   transition: all 0.5s linear;
+
 }
 
 .dot.active {
   background: rgba(32, 32, 32,0.7);
   transition: all 0.5s linear;
 }
+
